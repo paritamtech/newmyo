@@ -7,15 +7,28 @@ $(document).ready(function() {
 
     if (username === 'aiims_1' && password === 'Aiims#212') {
       $('#login-container').addClass('d-none');
-      $('#app-container').removeClass('d-none');
+      $('#instructions-container').removeClass('d-none');
     } else {
       alert('Invalid username or password');
     }
   });
 
+  // Proceed to Diagnose button
+  $('#proceed-btn').click(function() {
+    $('#instructions-container').addClass('d-none');
+    $('#app-container').removeClass('d-none');
+  });
+
+// "Go to Instructions" button
+  $('#go-to-instructions').click(function() {
+    $('#app-container').addClass('d-none');
+    $('#instructions-container').removeClass('d-none');
+  });
+
   // Questionnaire form submission
   $('#questionnaire').submit(function(event) {
     event.preventDefault();
+
     var q1 = parseInt($('input[name="q1"]:checked').val());
     var q2 = parseInt($('input[name="q2"]:checked').val());
     var q3 = parseInt($('input[name="q3"]:checked').val());
@@ -23,6 +36,7 @@ $(document).ready(function() {
     var q5 = parseInt($('input[name="q5"]:checked').val());
 
     var sum = q1 + q2 + q3 + q4 + q5;
+
     var resultText;
     var resultCardClass;
 
@@ -46,7 +60,9 @@ $(document).ready(function() {
     `);
 
     $('#result-text').text(`As per the observations, there is a ${resultText.toUpperCase()} possibility of Myocarditis.`);
+
     $('#result-card').addClass(resultCardClass);
+
     $('#app-container').addClass('d-none');
     $('#result-container').removeClass('d-none');
   });

@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="containheader" id="head1">
-<h1>MYOCARDITIS CALCULATOR</h1>
-</div>
+  <div class="containheader" id="head1">
+    <h1>MYOCARDITIS CALCULATOR</h1>
+  </div>
+
   <div class="container my-5" id="login-container">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -36,6 +37,26 @@
     </div>
   </div>
 
+  <div class="container my-5 d-none" id="instructions-container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h3>Instructions for Diagnosing Myocarditis</h3>
+            <ol>
+              <li>Give 5 points for presence of inflammation on either MRI, PET or Biopsy.</li>
+              <li>Give 3 points for raised CRP (CRP>3).</li>
+              <li>Give 1 point for presence of Chest Pain.</li>
+            </ol>
+            <p>The Results will indicate Definite or Probable Myocarditis or if it is Unlikely.</p>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary" id="proceed-btn">Proceed to Diagnose</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container my-5 d-none" id="app-container">
     <div class="d-flex justify-content-right mb-3">
       <button type="button" class="btn btn-danger" id="logout-btn">Logout</button>
@@ -44,7 +65,7 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-body">
-		  <h3>Please enter your observations</h3>
+            <h3>Please enter your observations</h3>
             <form id="questionnaire">
               <div class="form-group" id="param">
                 <label>MRI</label>
@@ -54,7 +75,7 @@
                 </div>
                 <div class="custom-control custom-radio">
                   <input type="radio" id="q1-option2" name="q1" class="custom-control-input" value="5">
-                  <label class="custom-control-label" for="q1-option2">Positive or Presence of Imflammation</label>
+                  <label class="custom-control-label" for="q1-option2">Positive or Presence of Inflammation</label>
                 </div>
               </div>
               <div class="form-group" id="param">
@@ -65,7 +86,7 @@
                 </div>
                 <div class="custom-control custom-radio">
                   <input type="radio" id="q2-option2" name="q2" class="custom-control-input" value="5">
-                  <label class="custom-control-label" for="q2-option2">Positive or Presence of Imflammation</label>
+                  <label class="custom-control-label" for="q2-option2">Positive or Presence of Inflammation</label>
                 </div>
               </div>
               <div class="form-group" id="param">
@@ -76,7 +97,7 @@
                 </div>
                 <div class="custom-control custom-radio">
                   <input type="radio" id="q3-option2" name="q3" class="custom-control-input" value="5">
-                  <label class="custom-control-label" for="q3-option2">Positive or Presence of Imflammation</label>
+                  <label class="custom-control-label" for="q3-option2">Positive or Presence of Inflammation</label>
                 </div>
               </div>
               <div class="form-group" id="param">
@@ -102,8 +123,9 @@
                 </div>
               </div>
               <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+              <button type="button" class="btn btn-info" id="go-to-instructions">Go to Instructions</button>
               </div>
             </form>
           </div>

@@ -1,22 +1,23 @@
-  body {
-      background-image: url('heart.jpeg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+body {
+  background-image: url('heart.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
 
-  }
 .card {
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-.containheader{
-	text-shadow: 20%;
-	text-align:center;
-	margin-top: 70px;
-	padding:0px;
+
+.containheader {
+  text-shadow: 20%;
+  text-align: center;
+  margin-top: 70px;
+  padding: 0px;
 }
 
 .btn-primary {
@@ -40,7 +41,7 @@
 }
 
 #result-card.probable {
-  background-color: ##FFFFED;
+  background-color: #FFFFED;
   color: #333;
 }
 
@@ -48,7 +49,20 @@
   background-color: #28a745;
   color: white;
 }
-.form-groun.param{
-	font-style: bold;
 
+.form-group.param {
+  font-style: bold;
+}
+
+#instructions-container .card {
+  width: 80%;
+}
+
+.d-flex.justify-content-center {
+  justify-content: center !important;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }
